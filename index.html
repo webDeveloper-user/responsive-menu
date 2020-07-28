@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>Usages all types of menu</title>
+		<!-- Fontawesome link -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>			
+		<div class="header-area">
+			<div class="container">
+				<nav class="main-menu">
+					<ul>
+						<li class="current"><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="#">Dropdown <i class="fa fa-angle-down"></i></a>
+							<div>
+								<ul>
+									<li><a href="#">Dropdown</a></li>
+									<li><a href="#">Dropdown</a></li>
+									<li><a href="#">Dropdown</a></li>
+									<li><a href="#">Sub Dropdown</a></li>
+									<li><a href="#">Dropdown</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<a class="responsive-menu-icon" href="#"><span>&#9776;</span></a>
+				</nav>
+			</div>
+		</div>
+		<!-- jQuery call -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<script>
+
+			$(document).ready(function(){
+				$(".main-menu ul li").click(function(){
+					$(".main-menu ul li").removeClass("current")
+					$(this).addClass("current")
+				});
+
+				$(".main-menu ul li").click(function(){
+				$(".main-menu ul li.current div").toggleClass("button")
+			  	});
+			  	$(".main-menu a.responsive-menu-icon").click(function(){
+			  		$(".main-menu ul").toggleClass("responsive-menu")
+			  	});
+
+			});
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,107 @@
+body{
+	margin:0;
+}
+.current {
+	background-color:#fbc531;;
+}
+.header-area {
+	background: #ddd;
+}
+.container{
+	width:80%;
+	margin:auto;
+	max-width:1200px;
+	
+}
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-menu ul::after {
+	content: "";
+	display:block;
+	clear:both;
+}
+.main-menu > ul > li {
+  float:left;
+  position:relative;  
+}
+.main-menu ul li a {
+  display: block;
+  text-decoration: none;
+  color: #000;  
+  padding: 15px 20px;
+}
+.main-menu ul li:hover a {
+	background-color:#fbc531;
+}
+.main-menu ul ul {
+	position:absolute;
+	min-width:200px;
+	z-index:999;
+	display:none;
+}
+.main-menu ul li:hover ul {
+	display:block;
+}
+.main-menu ul ul li {
+	position:relative;
+}
+.main-menu ul ul li:hover a {
+	background: #4cd137;
+}
+.main-menu ul ul ul {
+	top:0;
+	left:100%;
+}
+.main-menu ul ul ul li:hover a {
+	background: #fbc531;
+}
+.main-menu a.responsive-menu-icon {
+  color:#fff;
+  font-size:50px;
+  margin-right:100px;
+  display:none; 
+}
+
+/* Menu Responsive */
+@media all and (max-width:768px) {
+	.main-menu ul li ul {
+		display:none;
+	}
+	.container{
+		width:100%;		
+	}
+	.main-menu ul {
+		display:none;
+	}
+	.main-menu ul.responsive-menu {
+		display:block;
+	}
+	.main-menu a.responsive-menu-icon {
+		display:block;
+		text-align: right;
+		text-decoration: none;
+	}
+	.main-menu ul li {
+		float:none;
+	}
+	.main-menu ul ul {
+		position:inherit;
+	}
+	.main-menu ul li .button ul {
+		display:block;
+	}
+	.main-menu ul li:hover a {
+		background-color:transparent;
+	}
+	.main-menu ul ul li:hover a {
+		background-color:transparent;
+	}
+	.main-menu ul ul a:before {
+		content:" - ";
+		margin-left:20px;
+	}	
+
+}
